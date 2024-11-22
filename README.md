@@ -11,3 +11,8 @@ pour créer, modifier, organiser et publier du contenu. Dans un CMS, le fond et 
 sont dissociés, ce qui simplifie la création de site web. Il vous suffit par exemple 
 de copier le texte dans le champ prévu à cet effet et de cliquer sur le bouton "Publier" 
 pour mettre ce contenu en ligne. C'est bien sûr la même chose pour des photos ou des vidéos.
+
+# Contacts
+
+- [Tutoriel](https://readydev.ovh/home/tutoriels/php/application/systeme-gestion-contenu-web "Consultez le tutoriel sur (ReadyDev)")
+- [LinkedIn](https://www.linkedin.com/in/tia-gerard-kesse/ "Contactez-moi sur (LinkedIn)")
