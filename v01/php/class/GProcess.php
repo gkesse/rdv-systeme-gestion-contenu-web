@@ -8,14 +8,18 @@ class GProcess extends GObject
 
     public function __construct()
     {
-        //parent::__construct();
-        //$this->m_menu = new GMenu();
-        echo "Démarrage de l'application...";
+        parent::__construct();
+        $this->m_menu = new GMenu();
     }
 
     public function init()
     {
         $this->toHeader();
+    }
+
+    public function run($_module, $_method)
+    {
+        echo "Démarrage de l'application...";
     }
 
     public function runFooter()
