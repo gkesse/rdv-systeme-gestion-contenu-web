@@ -1,0 +1,96 @@
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #051039;
+    font-family: arial;
+    font-size: 16px;
+    text-align: center;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    overflow: auto;
+    scrollbar-color: #5f6681 #051039;
+    scrollbar-width: auto;
+}
+
+.Background1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    min-height: 300px;
+    z-index: -1;
+
+    background-image: url("/data/img/app-bg-top-paris-2024.gif"),
+    url("/data/img/app-bg-top-fond.jpg");
+    background-position: center top, left top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 85%, 100% 100%;
+
+    border: 10px solid transparent;
+    border-image: url("/data/img/app-border.png") 30 round;
+    -webkit-border-image: url("/data/img/app-border.png") 30 round;
+    -moz-border-image: url("/data/img/app-border.png") 30 round;
+    -o-border-image: url("/data/img/app-border.png") 30 round;
+}
+
+.Background2 {
+    position: absolute;
+    top: 300px;
+    bottom: 300px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+
+    background-image: url("/data/img/app-bg-middle.gif");
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+.Background3 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    min-height: 300px;
+    z-index: -1;
+
+    background-image: url("/data/img/app-bg-footer.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    border: 10px solid transparent;
+    border-image: url("/data/img/app-border.png") 30 round;
+    -webkit-border-image: url("/data/img/app-border.png") 30 round;
+    -moz-border-image: url("/data/img/app-border.png") 30 round;
+    -o-border-image: url("/data/img/app-border.png") 30 round;
+}
+
+.Html1 {
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.Html2 {
+    background-color: #253059;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 250px;
+    margin-bottom: 250px;
+    min-height: 150px;
+
+    border: 10px solid transparent;
+    border-image: url("/data/img/app-border.png") 30 round;
+    -webkit-border-image: url("/data/img/app-border.png") 30 round;
+    -moz-border-image: url("/data/img/app-border.png") 30 round;
+    -o-border-image: url("/data/img/app-border.png") 30 round;
+}
