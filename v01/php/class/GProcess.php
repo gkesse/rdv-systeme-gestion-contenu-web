@@ -9,7 +9,7 @@ class GProcess extends GObject
     public function __construct()
     {
         parent::__construct();
-        $this->m_menu = new GMenu();
+        //$this->m_menu = new GMenu();
     }
 
     public function init()
@@ -17,9 +17,9 @@ class GProcess extends GObject
         $this->toHeader();
     }
 
-    public function run($_module, $_method)
+    public function run()
     {
-        echo "Démarrage de l'application...";
+        echo sprintf("Démarrage de l'application...\n");
     }
 
     public function runFooter()
@@ -46,10 +46,10 @@ class GProcess extends GObject
     private function toTitle()
     {
         $lTitle = $this->toSiteName();
-        $lCurrentMenu = $this->m_menu->toCurrentMenu();
-        if ($lCurrentMenu->getTitle() != "") {
-            $lTitle = sprintf("%s | %s", $lTitle, $lCurrentMenu->getTitle());
-        }
+        // $lCurrentMenu = $this->m_menu->toCurrentMenu();
+        // if ($lCurrentMenu->getTitle() != "") {
+        //     $lTitle = sprintf("%s | %s", $lTitle, $lCurrentMenu->getTitle());
+        // }
         return $lTitle;
     }
 
@@ -60,6 +60,6 @@ class GProcess extends GObject
 
     public function toLogo()
     {
-        return "/data/img/defaults/readydev.png";
+        return "/data/img/app-logo.png";
     }
 }
