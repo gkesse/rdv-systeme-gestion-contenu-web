@@ -5,7 +5,7 @@ namespace php\class;
 class GEnv
 {
     private static $m_instance = null;
-    private $m_envType = "";
+    public $m_envType = "";
 
     private function __construct()
     {
@@ -18,11 +18,6 @@ class GEnv
             self::$m_instance = new GEnv();
         }
         return self::$m_instance;
-    }
-
-    public function isTestEnv()
-    {
-        return ($this->m_envType == "TEST");
     }
 
     private function loadEnv($_env, $_defaultValue = "")

@@ -75,6 +75,21 @@ html {
     -o-border-image: url("/data/img/app-border.png") 30 round;
 }
 
+.Bars1 {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    font-size: 25px;
+    font-family: Akronim;
+    color: white;
+    padding: 0 10px 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
 .Html1 {
     border: 1px solid transparent;
     position: relative;
@@ -93,4 +108,46 @@ html {
     -webkit-border-image: url("/data/img/app-border.png") 30 round;
     -moz-border-image: url("/data/img/app-border.png") 30 round;
     -o-border-image: url("/data/img/app-border.png") 30 round;
+}
+
+.Menu1 {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: left;
+    font-size: 0px;
+    position: relative;
+    line-height: 45px;
+}
+
+.Menu2 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    font-family: arial;
+    position: relative;
+}
+
+.Menu3 {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px 10px;
+}
+
+.Menu4 {
+    background-color: cyan;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 3px;
+    margin-right: 5px;
+}
+
+.Menu5  {
+    display: inline-block;
+    vertical-align: middle;
+    color: cyan;
+    font-size: 25px;
+    font-family: Akronim;
+    color: cyan;
 }

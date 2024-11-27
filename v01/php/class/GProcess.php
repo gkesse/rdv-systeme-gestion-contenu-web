@@ -13,12 +13,8 @@ class GProcess
 
     public function run()
     {
-        $lEnv = GEnv::Instance();
-        if ($lEnv->isTestEnv()) {
-            echo sprintf("Démarrage de l'application (TEST)...\n");
-        } else {
-            echo sprintf("Démarrage de l'application (PROD)...\n");
-        }
+        $lKernel = new GKernel();
+        $lKernel->run();
     }
 
     public function runFooter()
@@ -51,10 +47,6 @@ class GProcess
     private function toTitle()
     {
         $lTitle = $this->toSiteName();
-        // $lCurrentMenu = $this->m_menu->toCurrentMenu();
-        // if ($lCurrentMenu->getTitle() != "") {
-        //     $lTitle = sprintf("%s | %s", $lTitle, $lCurrentMenu->getTitle());
-        // }
         return $lTitle;
     }
 
@@ -70,6 +62,13 @@ class GProcess
 
     private function toStyleCss()
     {
+        echo sprintf("<link rel='stylesheet' href='/libs/google-fonts/Akronim/css.css'/>\n");
         echo sprintf("<link rel='stylesheet' href='/css/styles.css'/>\n");
+    }
+
+    private function isTestEnv()
+    {
+        $lEnv = GEnv::Instance();
+        return ($lEnv->m_envType == "TEST");
     }
 }
