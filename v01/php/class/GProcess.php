@@ -2,15 +2,9 @@
 
 namespace php\class;
 
-class GProcess extends GObject
+class GProcess
 {
-    private $m_menu = null;
-
-    public function __construct()
-    {
-        parent::__construct();
-        //$this->m_menu = new GMenu();
-    }
+    public function __construct() {}
 
     public function init()
     {
@@ -19,7 +13,12 @@ class GProcess extends GObject
 
     public function run()
     {
-        echo sprintf("Démarrage de l'application...\n");
+        $lEnv = GEnv::Instance();
+        if ($lEnv->isTestEnv()) {
+            echo sprintf("Démarrage de l'application (TEST)...\n");
+        } else {
+            echo sprintf("Démarrage de l'application (PROD)...\n");
+        }
     }
 
     public function runFooter()
