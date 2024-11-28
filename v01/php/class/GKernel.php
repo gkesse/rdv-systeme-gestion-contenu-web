@@ -26,7 +26,26 @@ class GKernel
 
     private function toPage()
     {
-        var_dump($_GET);
+        $lPageId = $this->getPageId();
+        echo sprintf("Appel de la page (%s)...", $lPageId);
+    }
+
+    private function getPageId()
+    {
+        $lPageId = $this->loadGET("pageId");
+        if ($lPageId != "") {
+            if (substr($lPageId, -1) == "/") {
+                $lPageId = substr($lPageId, 0, -1);
+            }
+        }
+        $lPageId = sprintf("/%s", $lPageId);
+        return $lPageId;
+    }
+
+    private function loadGET($_key, $_defaultValue = "")
+    {
+        if (!isset($_GET[$_key])) return $_defaultValue;
+        return $_GET[$_key];
     }
 
     private function toHome()
