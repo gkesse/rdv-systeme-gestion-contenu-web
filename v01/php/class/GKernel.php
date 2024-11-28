@@ -27,7 +27,22 @@ class GKernel
     private function toPage()
     {
         $lPageId = $this->getPageId();
-        echo sprintf("Appel de la page (%s)...", $lPageId);
+        if ($lPageId == "/home/admin") {
+            $this->toAdmin();
+        } else {
+            $this->toError();
+        }
+    }
+
+    private function toAdmin()
+    {
+        $lAdmin = new GAdmin();
+        $lAdmin->run();
+    }
+
+    private function toError()
+    {
+        echo sprintf("Page non trouvée...");
     }
 
     private function getPageId()

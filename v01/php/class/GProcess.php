@@ -13,11 +13,8 @@ class GProcess
 
     public function run()
     {
-        if ($this->isTestEnv()) {
-            echo sprintf("Démarrage de l'application (TEST)...\n");
-        } else {
-            echo sprintf("Démarrage de l'application (PROD)...\n");
-        }
+        $lKernel = new GKernel();
+        $lKernel->run();
     }
 
     public function runFooter()
