@@ -21,6 +21,7 @@ class GProcess
     {
         echo sprintf("</div>\n");
         echo sprintf("</div>\n");
+        $this->toScriptJs();
         echo sprintf("</body>\n");
         echo sprintf("</html>\n");
     }
@@ -67,9 +68,8 @@ class GProcess
         echo sprintf("<link rel='stylesheet' href='/css/styles.css'/>\n");
     }
 
-    private function isTestEnv()
+    public function toScriptJs()
     {
-        $lEnv = GEnv::Instance();
-        return ($lEnv->m_envType == "TEST");
+        echo sprintf("<script src='/js/scripts.js'></script>\n");
     }
 }
