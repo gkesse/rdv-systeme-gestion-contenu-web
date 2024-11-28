@@ -19,7 +19,7 @@ class GKernel
         echo sprintf("<span class='Menu5'>%s</span>\n", $this->toSiteName());
         // echo sprintf("</a>\n");
         //echo sprintf("Menu de l'application...\n");
-        //echo sprintf("<div class='Bars1'>Bars</div>\n");
+        echo sprintf("<div class='Bars1'><i class='fa fa-bars'></i></div>\n");
         echo sprintf("</div>\n");
     }
 

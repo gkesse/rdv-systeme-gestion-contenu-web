@@ -62,6 +62,7 @@ class GProcess
 
     private function toStyleCss()
     {
+        echo sprintf("<link rel='stylesheet' href='/libs/font-awesome/css/font-awesome.min.css'/>\n");
         echo sprintf("<link rel='stylesheet' href='/libs/google-fonts/Akronim/css.css'/>\n");
         echo sprintf("<link rel='stylesheet' href='/css/styles.css'/>\n");
     }
