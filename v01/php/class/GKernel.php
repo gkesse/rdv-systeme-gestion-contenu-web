@@ -9,6 +9,7 @@ class GKernel
     public function run()
     {
         $this->toMenu();
+        $this->toPage();
     }
 
     private function toMenu()
@@ -21,6 +22,11 @@ class GKernel
         //echo sprintf("Menu de l'application...\n");
         echo sprintf("<div class='Bars1' onclick='call_server(\"app\", \"open_menu_bars\", this)'><i class='fa fa-bars'></i></div>\n");
         echo sprintf("</div>\n");
+    }
+
+    private function toPage()
+    {
+        var_dump($_GET);
     }
 
     private function toHome()
