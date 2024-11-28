@@ -13,8 +13,11 @@ class GProcess
 
     public function run()
     {
-        $lKernel = new GKernel();
-        $lKernel->run();
+        if ($this->isTestEnv()) {
+            echo sprintf("Démarrage de l'application (TEST)...\n");
+        } else {
+            echo sprintf("Démarrage de l'application (PROD)...\n");
+        }
     }
 
     public function runFooter()
@@ -43,6 +46,18 @@ class GProcess
         echo sprintf("<div class='Background2'></div>\n");
         echo sprintf("<div class='Background3'></div>\n");
         echo sprintf("<div class='Html2 HtmlPage'>\n");
+    }
+
+    private function isTestEnv()
+    {
+        $lEnv = GEnv::Instance();
+        return ($lEnv->m_envType == "TEST");
+    }
+
+    private function loadEnv($_env, $_defaultValue = "")
+    {
+        $lEnv = getenv($_env);
+        return  $lEnv ? $lEnv : $_defaultValue;
     }
 
     private function toTitle()
